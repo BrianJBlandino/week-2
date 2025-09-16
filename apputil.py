@@ -1,8 +1,8 @@
 import numpy as np
 
 def ways(n):
-    ''' function that takes an integer (n) and returns the number of ways you
-    can make change using only pennies and nickels'''
+    """Creating a function that takes an integer (n) and returns the number of ways you
+    can make change using only pennies and nickels"""
     
     # ensuring the number of cents entered is valid
     if n < 0:
@@ -24,22 +24,18 @@ def ways(n):
 
 # creating an array of names per exercise
 names = np.array(['Hannah', 'Astrid', 'Abdul', 'Mauve', 'Jung'])
-
 # creating an array of respective scores per exercise
 scores = np.array([99, 71, 85, 62, 91])
 
 def lowest_scores(names, scores):
-    ''' Creating a function that returns the name of the student with the lowest score'''
+    """Creating a function that returns the name of the student with the lowest score"""
 
     # setting the score to the maximum possible value of 100
     score = 100
-
     # converting the array of names to a list
     names = names.tolist()
-
     # converting the array of scores to a list
     scores = scores.tolist()
-
     # creating an empty dictionary to build upon
     student_scores = {}
 
@@ -51,30 +47,26 @@ def lowest_scores(names, scores):
     for a, b in student_scores.items():
         if b < score:
             score = b
-            lowest_score = a
+            LOWEST_SCORE = a
 
-    # printing the result being the student with the lowest score
-    print(lowest_score)
+    # Returning the result being the student with the lowest score
+    return(LOWEST_SCORE)
 
 # creating an array of names per exercise
 names = np.array(['Hannah', 'Astrid', 'Abdul', 'Mauve', 'Jung'])
-
 # creating an array of respective scores per exercise
 scores = np.array([99, 71, 85, 62, 91])
 
 def sort_names(names, scores):
-    ''' Creating a function that sorts the students and their respective scores
-    by descending order'''
+    """Creating a function that sorts the students and their respective scores
+    by descending order"""
 
     # converting the array of names to a list
     names = names.tolist()
-
     # converting the array of scores to a list
     scores = scores.tolist()
-
     # creating an empty list to build upon
     student_scores = []
-
     # zipping through the names and scores list to build upon the empty list
     for n, s in zip(names, scores):
 
@@ -84,5 +76,5 @@ def sort_names(names, scores):
         # sorting the list by the second value of the tuple in descending order
         sorted_scores = sorted(student_scores, key=lambda item: item[1], reverse=True)
 
-    # simply printing the end result of a sorted list of tuples of pairs of the students and their scores
-    print(sorted_scores)
+    # Returning the end result of a sorted list of tuples of pairs of the students and their scores
+    return(sorted_scores)
