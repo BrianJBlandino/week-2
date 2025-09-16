@@ -47,10 +47,10 @@ def lowest_scores(names, scores):
     for a, b in student_scores.items():
         if b < score:
             score = b
-            LOWEST_SCORE = a
+            lowest_score = a
 
     # Returning the result being the student with the lowest score
-    return(LOWEST_SCORE)
+    return(lowest_score)
 
 # creating an array of names per exercise
 names = np.array(['Hannah', 'Astrid', 'Abdul', 'Mauve', 'Jung'])
